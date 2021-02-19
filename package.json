@@ -1,0 +1,61 @@
+{
+  "name": "v-paginator",
+  "version": "1.0.0",
+  "description": "Simple page-by-page navigation based on your html templates with ssr support",
+  "main": "dist/v-paginator.min.js",
+  "scripts": {
+    "build": "rollup --environment NODE_ENV:production -c rollup.config.js && uglifyjs dist/v-paginator.js -cm --comments -o dist/v-paginator.min.js && rm dist/v-paginator.js",
+    "dev": "webpack-dev-server --config webpack.config.js --progress --mode development",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-json-strings": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-import-meta": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.12.10",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "bootstrap": "^4.6.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.6.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-config-walmart": "^2.2.1",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-lodash": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^4.5.2",
+    "rollup": "^0.67.0",
+    "rollup-plugin-vue": "^5.1.9",
+    "style-loader": "^1.0.0",
+    "uglify-es": "^3.3.9",
+    "vue": "^2.6.12",
+    "vue-loader": "^15.9.3",
+    "vue-style-loader": "^4.1.2",
+    "vue-svg-loader": "^0.12.0",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.8.2"
+  },
+  "author": "sitronik",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sitronik/v-paginator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sitronik/v-paginator.git/issues"
+  },
+  "homepage": "https://github.com/Sitronik/v-paginator.git#readme"
+}
