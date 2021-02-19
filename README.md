@@ -4,7 +4,7 @@ The idea behind `v-paginator` is pretty simple. All you need to do is add 6 requ
 
 SSR support.
 
-<img src="https://raw.githubusercontent.com/sitronik/v-paginator/master/img/example1.gif" width="550" />
+<img src="https://raw.githubusercontent.com/sitronik/v-paginator/master/img/example1.gif" width="350" />
 
 # Installation
 
