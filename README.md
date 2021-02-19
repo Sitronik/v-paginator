@@ -1,4 +1,4 @@
-# v-paginator [![CDNJS version](https://img.shields.io/cdnjs/v/v-paginator.svg)](https://cdnjs.com/libraries/v-paginator)
+# v-paginator [![npm version](https://badge.fury.io/js/v-paginator.svg)](https://badge.fury.io/js/v-paginator)
 
 The idea behind `v-paginator` is pretty simple. All you need to do is add 6 required classes to your html template for injecting pagination functionality. 
 
