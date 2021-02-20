@@ -1,6 +1,6 @@
 {
   "name": "v-paginator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple page-by-page navigation for Vue.js based on your html templates with ssr support",
   "main": "dist/v-paginator.min.js",
   "scripts": {
