@@ -11,16 +11,6 @@ export default {
     query: Boolean
   },
   watch: {
-    $route(to) {
-      if (to.query.page !== this.page) {
-        this.page = +to.query.page;
-        this.$emit('changePage', +to.query.page);
-      }
-      if (!to.query.page) {
-        this.page = 1;
-        this.$emit('changePage', 1);
-      }
-    },
     perPage: {
       handler() {
         this.$emit('changePage', 1);

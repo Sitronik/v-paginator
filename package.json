@@ -1,7 +1,7 @@
 {
   "name": "v-paginator",
   "version": "1.0.1",
-  "description": "Simple page-by-page navigation based on your html templates with ssr support",
+  "description": "Simple page-by-page navigation for Vue.js based on your html templates with ssr support",
   "main": "dist/v-paginator.min.js",
   "scripts": {
     "build": "rollup --environment NODE_ENV:production -c rollup.config.js && uglifyjs dist/v-paginator.js -cm --comments -o dist/v-paginator.min.js && rm dist/v-paginator.js",
