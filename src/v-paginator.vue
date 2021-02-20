@@ -84,9 +84,13 @@ export default {
       },
       watch: {
         $route(to) {
-          if (this.query && +to.query.page !== this.page && !to.params.paginator) {
+          if (this.query && to.query.page && +to.query.page !== this.page && !to.params.paginator) {
             this.page = +to.query.page;
             this.$parent.$emit('changePage', +to.query.page);
+          }
+          if (this.query && !to.query.page) {
+            this.page = 1;
+            this.$parent.$emit('changePage', 1);
           }
         }
       },
