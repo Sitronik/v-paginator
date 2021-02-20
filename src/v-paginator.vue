@@ -14,7 +14,6 @@ export default {
     perPage: {
       handler() {
         this.$emit('changePage', 1);
-        this.$parent.$emit('changePage', 1);
       }
     }
   },
@@ -74,7 +73,7 @@ export default {
     }
 
     // react
-    const data = {total: this.total, perPage: this.perPage};
+    const data = {total: this.total, perPage: this.perPage, query: this.query};
 
     const component = {
       template: layout,
@@ -83,14 +82,23 @@ export default {
           return this.$route && parseInt(this.$route.query.page, 10) || 1;
         }
       },
+      watch: {
+        $route(to) {
+          if (this.query && +to.query.page !== this.page && !to.params.paginator) {
+            this.page = +to.query.page;
+            this.$parent.$emit('changePage', +to.query.page);
+          }
+        }
+      },
       data() {
         return {
-          page: self.page,
+          page: 1,
           pages: [],
           limitButtons: self.limitButtons || 4,
           totalPages: self.totalPages,
           total: data.total,
-          perPage: data.perPage
+          perPage: data.perPage,
+          query: data.query
         };
       },
       created() {
@@ -136,8 +144,6 @@ export default {
 
           this.page = pageTo;
 
-          // ssr
-          this.$emit('changePage', this.page);
           this.$parent.$emit('changePage', this.page);
 
           if (self.query && this.$router) {
@@ -145,7 +151,8 @@ export default {
               query: {
                 ...this.$route.query,
                 page: pageTo
-              }
+              },
+              params: {paginator: true}
             });
           }
         }
