@@ -6,6 +6,8 @@ SSR support.
 
 <img src="https://raw.githubusercontent.com/sitronik/v-paginator/master/img/example1.gif" width="350" />
 
+[Online demo](https://sitronik.github.io/v-paginator/)
+
 # Installation
 
 ## NPM
