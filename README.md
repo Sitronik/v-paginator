@@ -91,6 +91,11 @@ import {template} from './template.js'; // Your template with vue-paginator clas
 ```vue
 <v-paginator :per-page="perPage" :layout="template" :total="total" @changePage="yourFunction"/>
 ```    
+### Events
+| Event name | Arg Type | Description |
+|---|---|---|
+| `changePage` | `number` | The pagination event fires when the page changes |
+
 ## Props
 
 | Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Type | Description |
@@ -98,7 +103,6 @@ import {template} from './template.js'; // Your template with vue-paginator clas
 | `total`      | `Number` | Total counf of items for pagination. **required** |
 | `layout`      | `String` | Html template. **required** |
 | `perPage`    | `Number` | Number of items per page. **required** |
-| `changePage`   | `Event` | The pagination event fires when the page changes. |
 | `active-class`      | `String` | CSS class name for active page element **default** `active` |
 | `disabled-class` | `String` | CSS class name for disabled `next` or `prev` element **default** `disabled` |
 | `limit-buttons`      | `Number` | Number of displayed page buttons **default** `4` |
