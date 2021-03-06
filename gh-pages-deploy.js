@@ -7,9 +7,9 @@ const fs = require('fs');
     await execa('git', ['checkout', '--orphan', 'gh-pages']);
     // eslint-disable-next-line no-console
     console.log('Building started...');
-    await execa('npm', ['run', 'build']);
+    await execa('npm', ['run', 'site']);
     // Understand if it's dist or build folder
-    const folderName = fs.existsSync('site') ? 'site' : 'build';
+    const folderName = fs.existsSync('builds/site') ? 'builds/site' : 'build';
     await execa('git', ['--work-tree', folderName, 'add', '--all']);
     await execa('git', ['--work-tree', folderName, 'commit', '-m', 'gh-pages']);
     console.log('Pushing to gh-pages...');
