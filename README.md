@@ -91,7 +91,7 @@ import {template} from './template.js'; // Your template with vue-paginator clas
 ```vue
 <v-paginator :per-page="perPage" :layout="template" :total="total" @changePage="yourFunction"/>
 ```    
-### Events
+## Events
 | Event name | Arg Type | Description |
 |---|---|---|
 | `changePage` | `number` | The pagination event fires when the page changes |
