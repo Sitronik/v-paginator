@@ -108,8 +108,26 @@ import {template} from './template.js'; // Your template with vue-paginator clas
 | `limit-buttons`      | `Number` | Number of displayed page buttons **default** `4` |
 | `query` | `Boolean` | Adds the current page to the browser address bar `?page=` **default** `false` |
 
-## License
+# 🤝 Contributing
 
-[MIT](http://opensource.org/licenses/MIT)
+1. Fork this repository.
+2. Create new branch with feature name.
+3. Run `npm install` and `npm run dev`.
+4. Create your feature.
+5. Commit and set commit message with feature name.
+6. Push your code to your fork repository.
+7. Create pull request. 🙂
+
+# ⭐️ Support
+
+If you like this project, You can support me with starring ⭐ this repository.
+
+# 📄 License
+
+[MIT](LICENSE)
 
 Copyright (c) 2021 Sitronik
+
+Developed with ❤️ and ☕️
+
+
